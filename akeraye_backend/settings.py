@@ -68,21 +68,24 @@ CORS_ALLOWED_ORIGINS = [
     'http://127.0.0.1:8000',
     'http://127.0.0.1:3000',
     'http://64.226.81.32',
-    'http://64.226.81.32:1337'
+    'http://64.226.81.32:1337',
+    "http://akeraye-backend.onrender.com"
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'http://127.0.0.1:8000',
     'http://127.0.0.1:3000',
     'http://64.226.81.32',
-    'http://64.226.81.32:1337'
+    'http://64.226.81.32:1337',
+    "http://akeraye-backend.onrender.com"
 ]
 
 CORS_ORIGINS_WHITELIST = [
     'http://127.0.0.1:8000',
     'http://127.0.0.1:3000',
     'http://64.226.81.32',
-    'http://64.226.81.32:1337'
+    'http://64.226.81.32:1337',
+    "http://akeraye-backend.onrender.com"
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
