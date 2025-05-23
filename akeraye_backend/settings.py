@@ -20,7 +20,7 @@ SECRET_KEY = "django-insecure-4@#"
 DEBUG = True #bool(os.environ.get("DEBUG", default=0))
 
 if DEBUG:
-    ALLOWED_HOSTS = ["localhost", "127.0.0.1", "64.226.81.32"]
+    ALLOWED_HOSTS = ["localhost", "127.0.0.1", "64.226.81.32", "akeraye-backend.onrender.com"]
 else:
     ALLOWED_HOSTS = ["64.226.81.32"]
 
