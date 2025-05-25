@@ -7,7 +7,7 @@ ENV PYTHONUNBUFFERED 1
 
 RUN apt-get update && \
     apt-get install -y netcat && \
-    apt-get install -y --no-install-recommends build-essential
+    apt-get install -y --no-install-recommends build-essential libyaml-dev
 
 RUN pip install --upgrade pip
 COPY ./requirements.txt .
