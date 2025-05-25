@@ -8,13 +8,13 @@ services:
     depends_on:
       - web
     volumes:
-      - media_volume:/usr/src/akeraye_backend/media
+      - media_volume:/usr/src/backend/media
   web:
     build: ./akeraye_backend
     command: gunicorn akeraye_backend.wsgi:application --bind 0.0.0.0:8000
     volumes:
       - ./akeraye_backend/:/usr/src/akeraye_backend/
-      - media_volume:/usr/src/akeraye_backend/media
+      - media_volume:/usr/src/backend/media
     expose:
       - 8000
     env_file:
