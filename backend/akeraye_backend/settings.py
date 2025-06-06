@@ -17,7 +17,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-4@#"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True #bool(os.environ.get("DEBUG", default=0))
+DEBUG = False #bool(os.environ.get("DEBUG", default=0))
 
 if DEBUG:
     ALLOWED_HOSTS = ["localhost", "127.0.0.1", "165.22.27.173", "akeraye-backend.onrender.com"]

@@ -1,6 +1,6 @@
 FROM python:3.12.2-slim-bullseye
 
-WORKDIR /usr/src/app
+WORKDIR /usr/src/backend
 
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
@@ -19,4 +19,4 @@ RUN chmod +x entrypoint.sh
 
 COPY . .
 
-ENTRYPOINT [ "/usr/src/app/entrypoint.sh" ]
+ENTRYPOINT [ "/usr/src/backend/entrypoint.sh" ]
