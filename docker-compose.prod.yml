@@ -1,4 +1,4 @@
-version: '3.8'
+vversion: '3.8'
 
 services:
   nginx:
@@ -13,7 +13,7 @@ services:
     build: ./backend
     command: gunicorn akeraye_backend.wsgi:application --bind 0.0.0.0:8000
     volumes:
-      - ./backend/:/usr/src/backend/
+      - ./akeraye_backend/:/usr/src/akeraye_backend/
       - media_volume:/usr/src/backend/media
     expose:
       - 8000
