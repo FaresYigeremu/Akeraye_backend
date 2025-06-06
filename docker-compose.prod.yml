@@ -9,11 +9,13 @@ services:
       - web
     volumes:
       - media_volume:/usr/src/backend/media
+
   web:
     build: ./backend
     command: gunicorn akeraye_backend.wsgi:application --bind 0.0.0.0:8000
     volumes:
-      - ./akeraye_backend/:/usr/src/akeraye_backend/
+      # ─── Here we mount host ./backend/ over /usr/src/akeraye_backend/ ───
+      - ./backend/:/usr/src/akeraye_backend/
       - media_volume:/usr/src/backend/media
     expose:
       - 8000
@@ -22,6 +24,7 @@ services:
     depends_on:
       - db
       - daphne
+
   daphne:
     build: ./backend
     command: daphne --bind 0.0.0.0 -p 8002 akeraye_backend.asgi:application
@@ -29,6 +32,10 @@ services:
       - 8002:8002
     env_file:
       - ./.env.dev
+    volumes:
+      - ./backend/:/usr/src/akeraye_backend/
+      - media_volume:/usr/src/backend/media
+
   db:
     image: postgres:15
     volumes:
